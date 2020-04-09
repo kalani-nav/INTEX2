@@ -24,8 +24,8 @@ namespace INTEX2.Controllers
                 "                               C.launch_date, C.campaign_hearts, C.social_share_total, C.social_share_last_update, " +
                 "                               C.location_city, C.location_country, C.location_zip, C.is_charity, C.charity_valid, " +
                 "                               C.velocity " +
-                                                "FROM Campaigns C " +
-                                                "WHERE id BETWEEN 1 AND 9");
+                                                "FROM covid19_campaigns8 C " +
+                                                "WHERE id IN ('1', '2', '3', '4')");
 
             return View(campaigns);
         }

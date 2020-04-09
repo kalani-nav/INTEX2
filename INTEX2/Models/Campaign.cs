@@ -12,128 +12,128 @@ namespace INTEX2.Models
     public class Campaign
     {
         [DisplayName("id")]
-        public int id { get; set; }
+        public String id { get; set; }
 
         [DisplayName("url")]
-        public int url { get; set; }
+        public String url { get; set; }
 
         [Key]
         [DisplayName("Campaign Id")]
-        public int campaign_id { get; set; }
+        public String campaign_id { get; set; }
 
         [DisplayName("Auto FB Post Made")]
-        public Boolean auto_fb_post_mode { get; set; }
+        public String auto_fb_post_mode { get; set; }
 
         [DisplayName("Collected Date")]
-        public string collected_date { get; set; }
+        public String collected_date { get; set; }
 
         [DisplayName("Category Id")]
-        public int category_id { get; set; }
+        public String category_id { get; set; }
 
         [DisplayName("Category")]
-        public string category { get; set; }
+        public String category { get; set; }
 
         [DisplayName("Currency Code")]
-        public string currencycode { get; set; }
+        public String currencycode { get; set; }
 
         [DisplayName("Current Amount")]
-        public int current_amount { get; set; }
+        public String current_amount { get; set; }
 
         [DisplayName("Goal")]
-        public int goal { get; set; }
+        public String goal { get; set; }
 
         [DisplayName("Donators")]
-        public int donators { get; set; }
+        public String donators { get; set; }
 
         [DisplayName("Days Active")]
-        public int days_active { get; set; }
+        public String days_active { get; set; }
 
         [DisplayName("Days Created")]
-        public int days_created { get; set; }
+        public String days_created { get; set; }
 
         [DisplayName("Title")]
-        public string title { get; set; }
+        public String title { get; set; }
 
         [DisplayName("Description")]
-        public string description { get; set; }
+        public String description { get; set; }
 
         [DisplayName("Default URL")]
-        public string default_url { get; set; }
+        public String default_url { get; set; }
 
         [DisplayName("Has Beneficiary")]
-        public Boolean has_beneficiary { get; set; }
+        public String has_beneficiary { get; set; }
 
         [DisplayName("Media Type")]
-        public int media_type { get; set; }
+        public String media_type { get; set; }
 
         [DisplayName("Project Type")]
-        public int project_type { get; set; }
+        public String project_type { get; set; }
 
         [DisplayName("Turn Off Donations")]
-        public string turn_off_donations { get; set; }
+        public String turn_off_donations { get; set; }
 
         [DisplayName("User Id")]
-        public int user_id { get; set; }
+        public String user_id { get; set; }
 
         [DisplayName("User First Name")]
-        public string user_first_name { get; set; }
+        public String user_first_name { get; set; }
 
         [DisplayName("User Last Name")]
-        public string user_last_name { get; set; }
+        public String user_last_name { get; set; }
 
         [DisplayName("User Facebook Id")]
-        public string user_facebook_id { get; set; }
+        public String user_facebook_id { get; set; }
 
         [DisplayName("User Profile URL")]
-        public string user_profile_url { get; set; }
+        public String user_profile_url { get; set; }
 
         [DisplayName("Visible In Search")]
-        public Boolean visible_in_search { get; set; }
+        public String visible_in_search { get; set; }
 
         [DisplayName("Status")]
-        public Boolean status { get; set; }
+        public String status { get; set; }
 
         [DisplayName("Deactivated")]
-        public Boolean deactivated { get; set; }
+        public String deactivated { get; set; }
 
         [DisplayName("State")]
-        public string state { get; set; }
+        public String state { get; set; }
 
         [DisplayName("Is Launched")]
-        public Boolean is_launched { get; set; }
+        public String is_launched { get; set; }
 
         [DisplayName("Campaign Image Url")]
-        public string campaign_image_url { get; set; }
+        public String campaign_image_url { get; set; }
 
         [DisplayName("Created At")]
-        public string created_at { get; set; }
+        public String created_at { get; set; }
 
         [DisplayName("Launch Date")]
-        public string launch_date { get; set; }
+        public String launch_date { get; set; }
 
         [DisplayName("Campaign Hearts")]
-        public int campaign_hearts { get; set; }
+        public String campaign_hearts { get; set; }
 
         [DisplayName("Cocial Share Total")]
-        public int social_share_total { get; set; }
+        public String social_share_total { get; set; }
 
         [DisplayName("Social Share Last Update")]
-        public string social_share_last_update { get; set; }
+        public String social_share_last_update { get; set; }
 
         [DisplayName("Location City")]
-        public string location_city { get; set; }
+        public String location_city { get; set; }
 
         [DisplayName("Location Country")]
-        public string location_country { get; set; }
+        public String location_country { get; set; }
 
         [DisplayName("Location Zip")]
-        public string location_zip { get; set; }
+        public String location_zip { get; set; }
 
         [DisplayName("Is Charity")]
-        public Boolean is_charity { get; set; }
+        public String is_charity { get; set; }
 
         [DisplayName("Charity Valid")]
-        public Boolean charity_valid { get; set; }
+        public String charity_valid { get; set; }
 
         //[DisplayName("Charity Npo Id")]
         //public string charity_npo_id { get; set; }
@@ -142,7 +142,7 @@ namespace INTEX2.Models
         //public string charity_name { get; set; }
 
         [DisplayName("Velocity")]
-        public int velocity { get; set; }
+        public String velocity { get; set; }
 
     }
 }
