@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h1>[Your Name] stuff</h1>
+            <h1>Prediction of Current Amount</h1>
         </div>
         <table>
              <tr>

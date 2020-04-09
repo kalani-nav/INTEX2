@@ -30,7 +30,7 @@ namespace IntexStuff
             //lblResults.Text = response.Content.ToString();
 
             var results = JObject.Parse(response.Content);
-            string prediction = results["Results"]["output1"]["value"]["Values"].ToString();
+            string prediction = results["Results"]["output1"]["value"]["Values"].ToString().Replace("[", "").Replace("]", "").Replace("\"", "");
             //prediction = prediction.Replace("[", "").Replace("]", "");
 
             lblResults.Text = prediction;

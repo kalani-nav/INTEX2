@@ -288,6 +288,7 @@
     <Content Include="Content\myStyles.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="otherone.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -312,6 +313,13 @@
     <Compile Include="Models\Donation.cs" />
     <Compile Include="Models\Update.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="otherone.aspx.cs">
+      <DependentUpon>otherone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="otherone.aspx.designer.cs">
+      <DependentUpon>otherone.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
