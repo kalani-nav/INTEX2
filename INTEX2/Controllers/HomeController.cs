@@ -5,13 +5,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace INTEX2.Controllers
 {
     public class HomeController : Controller
     {
         private Intex2Context db = new Intex2Context();
+
+
         // GET: Home
+        [Authorize]
         public ActionResult Index()
         {
             IEnumerable<Campaign> campaigns =
@@ -29,5 +33,56 @@ namespace INTEX2.Controllers
 
             return View(campaigns);
         }
+
+        // GET: Home
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+ //Login logic
+        [HttpPost]
+        public ActionResult Login(FormCollection form, bool rememberMe = false)
+        {
+            String username = form["Username"].ToString();
+            String password = form["Password"].ToString();
+           
+            var currentCustomer =
+                db.Database.SqlQuery<User>(
+            "Select * " +
+            "FROM User " +
+            "WHERE username = '" + username + "' AND " +
+            "password = '" + password + "'" +
+            " AND type = D");
+            if (currentCustomer.Count() > 0)
+            {
+                FormsAuthentication.SetAuthCookie(username, rememberMe);
+                return RedirectToAction("Index", "Campaigns1");
+            }
+            else if (currentCustomer.Count() == 0)
+            {
+                var currentEmployee =
+                    db.Database.SqlQuery<User>(
+                "Select * " +
+                "FROM User " +
+                "WHERE username = '" + username + "' AND " +
+                "username = '" + password + "'" +
+                " AND type = C");
+                if (currentEmployee.Count() > 0)
+                {
+                    FormsAuthentication.SetAuthCookie(username, rememberMe);
+                    return RedirectToAction("Index", "Campaigns2");
+                }
+                else
+                {
+                    return View();
+                }
+            }
+            else
+            {
+                return View();
+            }
+        }
+
     }
 }

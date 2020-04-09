@@ -17,5 +17,6 @@ namespace INTEX2.DAL
         public DbSet<Campaign> Campaigns { get; set; }
         public DbSet<Donation> Donations { get; set; }
         public DbSet<Update> Updates { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
