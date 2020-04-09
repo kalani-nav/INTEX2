@@ -21,7 +21,7 @@ namespace INTEX2.Models
         [DisplayName("Campaign Id")]
         public String campaign_id { get; set; }
 
-        [DisplayName("Auto FB Post Made")]
+        [DisplayName("Auto FB Post Mode")]
         public String auto_fb_post_mode { get; set; }
 
         [DisplayName("Collected Date")]
