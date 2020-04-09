@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace INTEX2.Models
 {
+    [Table("Campaigns")]
     public class Campaign
     {
+        [DisplayName("id")]
+        public int id { get; set; }
+
         [DisplayName("url")]
         public int url { get; set; }
 
@@ -130,11 +135,11 @@ namespace INTEX2.Models
         [DisplayName("Charity Valid")]
         public Boolean charity_valid { get; set; }
 
-        [DisplayName("Charity Npo Id")]
-        public string charity_npo_id { get; set; }
+        //[DisplayName("Charity Npo Id")]
+        //public string charity_npo_id { get; set; }
 
-        [DisplayName("Charity Name")]
-        public string charity_name { get; set; }
+        //[DisplayName("Charity Name")]
+        //public string charity_name { get; set; }
 
         [DisplayName("Velocity")]
         public int velocity { get; set; }
