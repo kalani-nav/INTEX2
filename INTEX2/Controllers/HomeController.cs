@@ -15,7 +15,7 @@ namespace INTEX2.Controllers
 
 
         // GET: Home
-        [Authorize]
+        //[Authorize]
         public ActionResult Index()
         {
             IEnumerable<Campaign> campaigns =

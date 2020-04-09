@@ -10,6 +10,15 @@
     <h4>Campaign</h4>
     <hr />
     <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.campaign_image_url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.campaign_image_url)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.id)
         </dt>
@@ -240,14 +249,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.is_launched)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.campaign_image_url)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.campaign_image_url)
         </dd>
 
         <dt>

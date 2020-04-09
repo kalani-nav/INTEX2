@@ -4,32 +4,41 @@
     ViewBag.Title = "Corona Campaigns";
 }
 
+<br />
+<br />
+<br />
+<br />
 <h2>Find a Campaign</h2>
-
-@using (Html.BeginForm("SearchCampByKey", "Campaigns1", FormMethod.Post))
-{
-    <label>Search by Key Word</label>
-    @Html.TextBox("Search")
-    <br />
-    <input type="submit" value="Search" />
-    <br />
-    <br />
-}
-
-@using (Html.BeginForm("SearchCampByFLName", "Campaigns1", FormMethod.Post))
-{
-    <label><strong>Search by Creator</strong></label>
-    <br />
-    <label>First Name</label>
-    @Html.TextBox("FirstName")
-    <br />
-    <br />
-    <label>Last Name</label>
-    @Html.TextBox("LastName")
-    <br />
-    <br />
-    <input type="submit" value="Search Name" />
-}
+<br />
+<table>
+    <td>
+        @using (Html.BeginForm("SearchCampByKey", "Campaigns1", FormMethod.Post))
+        {
+            <label>Search by Key Word</label>
+            @Html.TextBox("Search")
+            <br />
+            <input type="submit" class="homeBtn" value="Search" />
+            <br />
+            <br />
+        }
+    </td>
+    <td style="float: right;">
+        @using (Html.BeginForm("SearchCampByFLName", "Campaigns1", FormMethod.Post))
+        {
+            <label><strong>Search by Creator</strong></label>
+            <br />
+            <label>First Name</label>
+            @Html.TextBox("FirstName")
+            <br />
+            <br />
+            <label>Last Name</label>
+            @Html.TextBox("LastName")
+            <br />
+            <br />
+            <input type="submit" class="homeBtn" value="Search Name" />
+        }
+    </td>
+</table>
 
 
 @*<p>

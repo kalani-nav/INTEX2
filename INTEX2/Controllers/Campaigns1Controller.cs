@@ -16,6 +16,29 @@ namespace INTEX2.Controllers
         private Intex2Context db = new Intex2Context();
 
 
+        // GET: Campaigns1
+        //[Authorize]
+        public ActionResult Index()
+        {
+            var checkSearch =
+            db.Database.SqlQuery<Campaign>(
+            "Select TOP 1 PERCENT * " +
+            "FROM covid19_campaigns8 ");
+
+            if (checkSearch.Count() > 0)
+            {
+                return View("Index", checkSearch.ToList());
+            }
+            else
+            {
+                return View("Index", db.Campaigns.ToList());
+            }
+
+            return View(db.Campaigns.ToList());
+        }
+
+
+
         //[HttpGet]
         //public ActionResult PastWorkOrders() //displays all work orders, no matter the status
         //{
@@ -58,7 +81,8 @@ namespace INTEX2.Controllers
                 db.Database.SqlQuery<Campaign>(
                     "SELECT * " +
                     "FROM covid19_campaigns8 " +
-                    "WHERE user_first_name = '" + First + "' AND user_last_name = '" + Last + "'");
+                    "WHERE (user_first_name = '" + First + "' AND user_last_name = '" + Last + "') OR " +
+                    "(user_first_name = '" + First + "' OR user_last_name = '" + Last + "')");
 
             if (FirstLastCheck.Count() > 0)
             {
@@ -79,36 +103,8 @@ namespace INTEX2.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // GET: Campaigns1
-        public ActionResult Index()
-        {
-            return View(db.Campaigns.ToList());
-        }
-
         // GET: Campaigns1/Details/5
+        //[Authorize]
         public ActionResult Details(string id)
         {
             if (id == null)
