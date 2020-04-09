@@ -1,0 +1,305 @@
+﻿@model IEnumerable<INTEX2.Models.Campaign>
+
+@{
+    ViewBag.Title = "Corona Campaigns";
+}
+
+<h2>Find a Campaign</h2>
+
+@using (Html.BeginForm("SearchCampByKey", "Campaigns1", FormMethod.Post))
+{
+    <label>Search by Key Word</label>
+    @Html.TextBox("Search")
+    <br />
+    <input type="submit" value="Search" />
+    <br />
+    <br />
+}
+
+@using (Html.BeginForm("SearchCampByFLName", "Campaigns1", FormMethod.Post))
+{
+    <label><strong>Search by Creator</strong></label>
+    <br />
+    <label>First Name</label>
+    @Html.TextBox("FirstName")
+    <br />
+    <br />
+    <label>Last Name</label>
+    @Html.TextBox("LastName")
+    <br />
+    <br />
+    <input type="submit" value="Search Name" />
+}
+
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>*@
+        @*<th>
+                @Html.DisplayNameFor(model => model.url)
+            </th>*@
+        @*<th>
+                @Html.DisplayNameFor(model => model.auto_fb_post_mode)
+            </th>*@
+        @*<th>
+                @Html.DisplayNameFor(model => model.collected_date)
+            </th>*@
+        <th>
+            <strong>
+                @Html.DisplayNameFor(model => model.title)
+            </strong>
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.category_id)
+            </th>*@
+        @*<th>
+                @Html.DisplayNameFor(model => model.category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.currencycode)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.current_amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.goal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.donators)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.days_active)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.days_created)
+            </th>*@
+        @*<th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.default_url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.has_beneficiary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.media_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.project_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.turn_off_donations)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.user_id)
+            </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.user_first_name)
+        </th>*@
+        <th>
+            <strong>Creator Name</strong>
+            @*@Html.DisplayNameFor(model => model.user_last_name)*@
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.user_facebook_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.user_profile_url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.visible_in_search)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.deactivated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.state)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.is_launched)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.campaign_image_url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.created_at)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.launch_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.campaign_hearts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.social_share_total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.social_share_last_update)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.location_city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.location_country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.location_zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.is_charity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.charity_valid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.velocity)
+            </th>*@
+        @*<th></th>*@
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.url)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.auto_fb_post_mode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.collected_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.category_id)
+                </td>*@
+            <td>
+                @*@Html.DisplayFor(modelItem => item.title)*@
+                @Html.ActionLink(item.title, "Details", new { id = item.campaign_id })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.category)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.currencycode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.current_amount)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.goal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.donators)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.days_active)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.days_created)
+                </td>*@
+
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.default_url)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.has_beneficiary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.media_type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.project_type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.turn_off_donations)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user_id)
+                </td>*@
+            @*<td>
+                
+            </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.user_first_name) 
+            @Html.DisplayFor(modelItem => item.user_last_name)
+        </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.user_facebook_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user_profile_url)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.visible_in_search)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.deactivated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.state)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.is_launched)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.campaign_image_url)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.created_at)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.launch_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.campaign_hearts)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.social_share_total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.social_share_last_update)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location_city)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location_country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location_zip)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.is_charity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.charity_valid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.velocity)
+                </td>*@
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.campaign_id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.campaign_id })
+                </td>*@
+        </tr>
+    }
+
+</table>

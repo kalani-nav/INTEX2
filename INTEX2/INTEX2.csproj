@@ -290,6 +290,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Campaigns1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\Intex2Context.cs" />
     <Compile Include="Default.aspx.cs">
@@ -317,6 +318,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Campaigns1\Create.cshtml" />
+    <Content Include="Views\Campaigns1\Delete.cshtml" />
+    <Content Include="Views\Campaigns1\Details.cshtml" />
+    <Content Include="Views\Campaigns1\Edit.cshtml" />
+    <Content Include="Views\Campaigns1\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
