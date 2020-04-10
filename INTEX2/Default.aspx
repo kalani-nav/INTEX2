@@ -35,6 +35,7 @@
 
         <div>
             <h1>Prediction of Current Amount</h1>
+            <a href="/" class="btn btn-primary">Home</a>
         </div>
         <hr />
         <div class="centerBody">
@@ -92,7 +93,7 @@
         </table>
         </div>
     
-    <asp:Label ID="lblResults" runat="server" Font-Size="Large"></asp:Label>
+    <p>This campaign is predicted to reach $</p><asp:Label ID="lblResults" runat="server" Font-Size="Large"></asp:Label>
     </form>
     </div>
     <div class="container body-content">

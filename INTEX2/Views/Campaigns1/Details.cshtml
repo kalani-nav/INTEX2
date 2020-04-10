@@ -1,0 +1,347 @@
+﻿@model INTEX2.Models.Campaign
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Campaign</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.campaign_image_url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.campaign_image_url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.auto_fb_post_mode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.auto_fb_post_mode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.collected_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.collected_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currencycode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currencycode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.current_amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.current_amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.goal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.goal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.donators)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.donators)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.days_active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.days_active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.days_created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.days_created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.default_url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.default_url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.has_beneficiary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.has_beneficiary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.media_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.media_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.project_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.project_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.turn_off_donations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.turn_off_donations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_first_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_first_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_last_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_facebook_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_facebook_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_profile_url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_profile_url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.visible_in_search)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.visible_in_search)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deactivated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deactivated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.state)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_launched)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_launched)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.created_at)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.created_at)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.launch_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.launch_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.campaign_hearts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.campaign_hearts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.social_share_total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.social_share_total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.social_share_last_update)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.social_share_last_update)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location_city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location_city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location_country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location_country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location_zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location_zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_charity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_charity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.charity_valid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.charity_valid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.velocity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.velocity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.campaign_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

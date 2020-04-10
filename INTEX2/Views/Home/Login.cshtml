@@ -1,0 +1,17 @@
+﻿@model INTEX2.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+    <br /><br /><br /><br />
+<h2>Login</h2>
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <label for="Username">Username</label>
+    @Html.TextBox("Username")
+    <label for="inputPassword">Password</label>
+    @Html.Password("Password")
+    <button type="submit" class="homeBtn">Login</button>
+}

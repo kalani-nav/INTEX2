@@ -6,16 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using RestSharp;
 using Newtonsoft.Json.Linq;
-
 namespace IntexStuff
 {
     public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
-
         protected void lbPredict_Click(object sender, EventArgs e)
         {
             var client = new RestClient("https://ussouthcentral.services.azureml.net/workspaces/3387204766d94876956c2334f54933fe/services/904e64aac16344fbac5c8c699ed0fb77/execute?api-version=2.0&details=true");
@@ -28,13 +25,10 @@ namespace IntexStuff
             IRestResponse response = client.Execute(request);
             //Console.WriteLine(response.Content);
             //lblResults.Text = response.Content.ToString();
-
             var results = JObject.Parse(response.Content);
             string prediction = results["Results"]["output1"]["value"]["Values"].ToString().Replace("[", "").Replace("]", "").Replace("\"", "");
             //prediction = prediction.Replace("[", "").Replace("]", "");
-
             lblResults.Text = prediction;
         }
     }
 }
-

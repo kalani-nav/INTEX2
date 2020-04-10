@@ -8,6 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoFundMe Predictor</title>
+
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="Content/myStyles.css" rel="stylesheet" />
@@ -33,7 +34,8 @@
     <div class="centerBody">
     <form id="form1" runat="server">
         <div>
-            <h1>Fraud or Not</h1>    
+            <h1>Fraud Account Predictor</h1>  
+            <a href="/" class="btn btn-primary">Home</a>
         </div>
         <hr />
         <table class="center">

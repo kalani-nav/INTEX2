@@ -7,7 +7,23 @@
     text-align:center;
 }
 
+.centerStuff {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 table.center {
     margin-left: auto;
     margin-right: auto;
+}
+
+.cardImg {
+    height: 20rem;
+    width: 20rem;
+    object-fit: none;
+}
+
+.jumboImg {
+    height: 15rem;
+    width: auto;
 }
