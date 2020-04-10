@@ -8,7 +8,7 @@ using System.Web;
 
 namespace INTEX2.Models
 {
-    [Table("Campaigns")]
+    [Table("covid19_campaigns8")]
     public class Campaign
     {
         [DisplayName("id")]

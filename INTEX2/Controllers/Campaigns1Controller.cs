@@ -105,8 +105,9 @@ namespace INTEX2.Controllers
 
         // GET: Campaigns1/Details/5
         [Authorize]
-        public ActionResult Details(string id)
+        public ActionResult Details(String id)
         {
+            id = id.ToString();
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

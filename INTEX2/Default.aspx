@@ -35,7 +35,7 @@
 
         <div>
             <h1>Prediction of Current Amount</h1>
-            <a href="/" class="btn btn-primary">Home</a>
+            <a href="/Home/Client" class="btn btn-primary">Home</a>
         </div>
         <hr />
         <div class="centerBody">
